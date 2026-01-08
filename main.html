@@ -1,187 +1,125 @@
-<!DOCTYPE html>
-<!-- Déclaration du type de document : HTML5 -->
-<html lang="fr">
-<!-- Début du document HTML, langue définie en français -->
+<!DOCTYPE html> <!-- Indique au navigateur que le document est en HTML5 -->
+<html lang="fr"> <!-- Balise racine du document, langue française -->
 
-<head>
-  <!-- Encodage des caractères pour éviter les bugs d'affichage -->
-  <meta charset="UTF-8">
+<head> <!-- Contient les informations non visibles de la page -->
 
-  <!-- Titre affiché dans l'onglet du navigateur -->
-  <title>Cours Réseaux Informatiques</title>
+  <meta charset="UTF-8"> <!-- Définit l’encodage pour afficher correctement les caractères -->
 
-  <!-- Permet un affichage correct sur mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours Réseaux Informatiques</title> <!-- Titre affiché dans l’onglet du navigateur -->
 
-  <!-- Début du style CSS interne -->
-  <style>
-    /* Variables CSS pour centraliser les couleurs */
-    :root {
-      --bg: #0f172a;        /* Couleur de fond principale */
-      --card: #111827;      /* Couleur des cartes */
-      --accent: #38bdf8;    /* Couleur d'accent (titres) */
-      --text: #e5e7eb;      /* Couleur du texte */
-      --muted: #9ca3af;     /* Texte secondaire */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rend la page responsive -->
+
+  <style> /* Début du code CSS intégré */
+
+    :root { /* Variables CSS globales */
+      --bg: #020617; /* Couleur de fond principale */
+      --card: #0f172a; /* Couleur des blocs */
+      --accent: #38bdf8; /* Couleur des titres */
+      --text: #e5e7eb; /* Couleur du texte */
+      --muted: #9ca3af; /* Couleur secondaire */
     }
 
-    /* Réinitialisation basique */
-    * { 
-      box-sizing: border-box; /* Inclut padding et bordure dans la taille */
+    * { /* Sélecteur universel */
+      box-sizing: border-box; /* Inclut padding et bordures dans la taille */
     }
 
-    /* Style global de la page */
-    body {
+    body { /* Style général de la page */
       margin: 0; /* Supprime les marges par défaut */
-      font-family: 'Segoe UI', sans-serif; /* Police moderne */
-      background: linear-gradient(120deg, #020617, #0f172a); /* Dégradé */
-      color: var(--text); /* Couleur du texte */
-      line-height: 1.6; /* Espacement entre les lignes */
+      font-family: Arial, sans-serif; /* Police simple et lisible */
+      background-color: var(--bg); /* Applique la couleur de fond */
+      color: var(--text); /* Applique la couleur du texte */
+      line-height: 1.7; /* Espacement entre les lignes */
     }
 
-    /* En-tête */
-    header {
-      padding: 3rem 1rem; /* Espacement interne */
-      text-align: center; /* Centrage du texte */
+    header { /* Style de l’en-tête */
+      padding: 2rem; /* Espace intérieur */
+      text-align: center; /* Centre le texte */
     }
 
-    header h1 {
-      font-size: 2.5rem; /* Taille du titre principal */
-      margin-bottom: 0.5rem;
-      color: var(--accent); /* Couleur d'accent */
+    h1 { /* Titre principal */
+      color: var(--accent); /* Couleur du titre */
     }
 
-    header p {
-      color: var(--muted); /* Texte secondaire */
-      max-width: 700px; /* Largeur max */
-      margin: auto; /* Centrage horizontal */
-    }
-
-    /* Conteneur principal */
-    main {
-      max-width: 1100px; /* Largeur max */
-      margin: auto; /* Centrage */
-      padding: 2rem 1rem;
+    main { /* Contenu principal */
+      max-width: 1000px; /* Largeur maximale */
+      margin: auto; /* Centre horizontalement */
+      padding: 1rem; /* Marge intérieure */
       display: grid; /* Mise en page en grille */
-      gap: 2rem; /* Espacement entre sections */
+      gap: 1.5rem; /* Espacement entre les sections */
     }
 
-    /* Sections (cartes) */
-    section {
-      background: var(--card); /* Fond sombre */
-      border-radius: 16px; /* Coins arrondis */
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Ombre */
-      transition: transform 0.3s ease; /* Animation */
+    section { /* Bloc de contenu */
+      background-color: var(--card); /* Couleur de fond */
+      padding: 1.5rem; /* Espace intérieur */
+      border-radius: 12px; /* Coins arrondis */
     }
 
-    section:hover {
-      transform: translateY(-5px); /* Effet au survol */
+    h2 { /* Titres de sections */
+      color: var(--accent); /* Couleur du titre */
     }
 
-    /* Titres de sections */
-    h2 {
-      color: var(--accent);
-      margin-top: 0;
+    details { /* Bloc interactif */
+      margin-top: 1rem; /* Marge au-dessus */
     }
 
-    /* Bloc déroulant */
-    details {
-      margin-top: 1rem;
-      background: rgba(255,255,255,0.03);
-      padding: 1rem;
-      border-radius: 12px;
+    summary { /* Titre cliquable */
+      cursor: pointer; /* Curseur de clic */
+      font-weight: bold; /* Texte en gras */
     }
 
-    /* Titre cliquable */
-    summary {
-      cursor: pointer; /* Curseur cliquable */
-      font-weight: bold;
-      color: #7dd3fc;
+    ul { /* Listes */
+      padding-left: 1.5rem; /* Décalage à gauche */
     }
 
-    /* Listes */
-    ul {
-      padding-left: 1.2rem;
+    footer { /* Pied de page */
+      text-align: center; /* Centre le texte */
+      padding: 1rem; /* Espace intérieur */
+      color: var(--muted); /* Couleur atténuée */
     }
 
-    /* Étiquettes */
-    .tag {
-      display: inline-block;
-      background: rgba(56,189,248,0.15);
-      color: var(--accent);
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 0.3rem;
-    }
+  </style> <!-- Fin du CSS -->
+</head> <!-- Fin du head -->
 
-    /* Pied de page */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
+<body> <!-- Début du contenu visible -->
 
-<body>
+<header> <!-- En-tête de la page -->
+  <h1>Cours Réseaux Informatiques</h1> <!-- Titre principal -->
+  <p>Page web remplaçant un diaporama</p> <!-- Description -->
+</header> <!-- Fin de l’en-tête -->
 
-<!-- En-tête visible -->
-<header>
-  <h1>Réseaux Informatiques</h1>
-  <p>Page web interactive remplaçant un diaporama</p>
-</header>
+<main> <!-- Début du contenu principal -->
 
-<!-- Contenu principal -->
-<main>
+  <section> <!-- Section topologies -->
+    <h2>1. Topologies des réseaux</h2> <!-- Titre -->
+    <p>La topologie décrit la structure d’un réseau.</p> <!-- Texte explicatif -->
 
-  <!-- Section : Topologies -->
-  <section>
-    <h2>1. Topologie des réseaux</h2>
-    <p>La topologie décrit la structure du réseau.</p>
+    <details> <!-- Bloc déroulant -->
+      <summary>Bus</summary> <!-- Titre cliquable -->
+      <p>Un seul câble partagé par tous les ordinateurs.</p> <!-- Description -->
+    </details> <!-- Fin du bloc -->
 
     <details>
-      <summary>Réseau en bus</summary>
-      <ul>
-        <li>Un seul câble partagé</li>
-        <li>Avantage : simple</li>
-        <li>Inconvénient : collisions</li>
-      </ul>
+      <summary>Anneau</summary>
+      <p>Les ordinateurs forment une boucle fermée.</p>
     </details>
 
     <details>
-      <summary>Réseau en anneau</summary>
-      <ul>
-        <li>Connexion en boucle</li>
-        <li>Avantage : pas de collision</li>
-        <li>Inconvénient : panne globale</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Réseau en étoile</summary>
-      <ul>
-        <li>Centre de connexion</li>
-        <li>Avantage : fiable</li>
-        <li>Inconvénient : dépendance centrale</li>
-      </ul>
+      <summary>Étoile</summary>
+      <p>Les postes sont reliés à un équipement central.</p>
     </details>
   </section>
 
-  <!-- Section : Équipements -->
-  <section>
+  <section> <!-- Section équipements -->
     <h2>2. Équipements réseaux</h2>
     <ul>
-      <li><span class="tag">Hub</span> diffuse à tous</li>
-      <li><span class="tag">Switch</span> cible le destinataire</li>
-      <li><span class="tag">Routeur</span> relie les réseaux</li>
-      <li><span class="tag">Serveur</span> fournit des services</li>
+      <li>Hub : diffuse à tous</li>
+      <li>Switch : envoie au bon destinataire</li>
+      <li>Routeur : relie les réseaux</li>
+      <li>Serveur : fournit des services</li>
     </ul>
   </section>
 
-  <!-- Section : OSI -->
-  <section>
+  <section> <!-- Section OSI -->
     <h2>3. Modèle OSI</h2>
     <ol>
       <li>Physique</li>
@@ -194,50 +132,36 @@
     </ol>
   </section>
 
-  <!-- Section : IP -->
-  <section>
-    <h2>4. Classes d’adresses IP</h2>
-    <p>Une IP = NetID + HostID</p>
-    <ul>
-      <li>Classe A</li>
-      <li>Classe B</li>
-      <li>Classe C</li>
-    </ul>
+  <section> <!-- Section IP -->
+    <h2>4. Adressage IP</h2>
+    <p>Une adresse IP est composée d’un NetID et d’un HostID.</p>
   </section>
 
-  <!-- Section : Masques -->
-  <section>
-    <h2>5. Masques de sous-réseau</h2>
-    <ul>
-      <li>A : 255.0.0.0</li>
-      <li>B : 255.255.0.0</li>
-      <li>C : 255.255.255.0</li>
-    </ul>
+  <section> <!-- Section masque -->
+    <h2>5. Masque de sous-réseau</h2>
+    <p>Il permet d’identifier la partie réseau.</p>
   </section>
 
-  <!-- Section : CIDR -->
-  <section>
-    <h2>6. CIDR et sous-réseaux</h2>
+  <section> <!-- Section CIDR -->
+    <h2>6. CIDR</h2>
     <p>Exemple : 192.168.1.0/24</p>
   </section>
 
-  <!-- Section : HTML -->
-  <section>
+  <section> <!-- Section HTML -->
     <h2>7. Balises HTML</h2>
     <ul>
-      <li>&lt;html&gt; : racine</li>
-      <li>&lt;head&gt; : infos</li>
-      <li>&lt;body&gt; : contenu</li>
-      <li>&lt;section&gt; : bloc</li>
+      <li>html : racine</li>
+      <li>head : informations</li>
+      <li>body : contenu visible</li>
+      <li>section : bloc</li>
     </ul>
   </section>
 
-</main>
+</main> <!-- Fin du contenu principal -->
 
-<!-- Pied de page -->
-<footer>
-  © Cours Réseaux – HTML / CSS
-</footer>
+<footer> <!-- Pied de page -->
+  <p>© Cours Réseaux - HTML CSS</p> <!-- Texte du footer -->
+</footer> <!-- Fin du pied de page -->
 
-</body>
-</html>
+</body> <!-- Fin du body -->
+</html> <!-- Fin du document HTML -->
