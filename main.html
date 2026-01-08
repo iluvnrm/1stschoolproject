@@ -1,167 +1,130 @@
-<!DOCTYPE html> <!-- Indique au navigateur que le document est en HTML5 -->
-<html lang="fr"> <!-- Balise racine du document, langue française -->
-
-<head> <!-- Contient les informations non visibles de la page -->
-
-  <meta charset="UTF-8"> <!-- Définit l’encodage pour afficher correctement les caractères -->
-
-  <title>Cours Réseaux Informatiques</title> <!-- Titre affiché dans l’onglet du navigateur -->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rend la page responsive -->
-
-  <style> /* Début du code CSS intégré */
-
-    :root { /* Variables CSS globales */
-      --bg: #020617; /* Couleur de fond principale */
-      --card: #0f172a; /* Couleur des blocs */
-      --accent: #38bdf8; /* Couleur des titres */
-      --text: #e5e7eb; /* Couleur du texte */
-      --muted: #9ca3af; /* Couleur secondaire */
-    }
-
-    * { /* Sélecteur universel */
-      box-sizing: border-box; /* Inclut padding et bordures dans la taille */
-    }
-
-    body { /* Style général de la page */
-      margin: 0; /* Supprime les marges par défaut */
-      font-family: Arial, sans-serif; /* Police simple et lisible */
-      background-color: var(--bg); /* Applique la couleur de fond */
-      color: var(--text); /* Applique la couleur du texte */
-      line-height: 1.7; /* Espacement entre les lignes */
-    }
-
-    header { /* Style de l’en-tête */
-      padding: 2rem; /* Espace intérieur */
-      text-align: center; /* Centre le texte */
-    }
-
-    h1 { /* Titre principal */
-      color: var(--accent); /* Couleur du titre */
-    }
-
-    main { /* Contenu principal */
-      max-width: 1000px; /* Largeur maximale */
-      margin: auto; /* Centre horizontalement */
-      padding: 1rem; /* Marge intérieure */
-      display: grid; /* Mise en page en grille */
-      gap: 1.5rem; /* Espacement entre les sections */
-    }
-
-    section { /* Bloc de contenu */
-      background-color: var(--card); /* Couleur de fond */
-      padding: 1.5rem; /* Espace intérieur */
-      border-radius: 12px; /* Coins arrondis */
-    }
-
-    h2 { /* Titres de sections */
-      color: var(--accent); /* Couleur du titre */
-    }
-
-    details { /* Bloc interactif */
-      margin-top: 1rem; /* Marge au-dessus */
-    }
-
-    summary { /* Titre cliquable */
-      cursor: pointer; /* Curseur de clic */
-      font-weight: bold; /* Texte en gras */
-    }
-
-    ul { /* Listes */
-      padding-left: 1.5rem; /* Décalage à gauche */
-    }
-
-    footer { /* Pied de page */
-      text-align: center; /* Centre le texte */
-      padding: 1rem; /* Espace intérieur */
-      color: var(--muted); /* Couleur atténuée */
-    }
-
-  </style> <!-- Fin du CSS -->
-</head> <!-- Fin du head -->
-
-<body> <!-- Début du contenu visible -->
-
-<header> <!-- En-tête de la page -->
-  <h1>Cours Réseaux Informatiques</h1> <!-- Titre principal -->
-  <p>Page web remplaçant un diaporama</p> <!-- Description -->
-</header> <!-- Fin de l’en-tête -->
-
-<main> <!-- Début du contenu principal -->
-
-  <section> <!-- Section topologies -->
-    <h2>1. Topologies des réseaux</h2> <!-- Titre -->
-    <p>La topologie décrit la structure d’un réseau.</p> <!-- Texte explicatif -->
-
-    <details> <!-- Bloc déroulant -->
-      <summary>Bus</summary> <!-- Titre cliquable -->
-      <p>Un seul câble partagé par tous les ordinateurs.</p> <!-- Description -->
-    </details> <!-- Fin du bloc -->
-
-    <details>
-      <summary>Anneau</summary>
-      <p>Les ordinateurs forment une boucle fermée.</p>
-    </details>
-
-    <details>
-      <summary>Étoile</summary>
-      <p>Les postes sont reliés à un équipement central.</p>
-    </details>
-  </section>
-
-  <section> <!-- Section équipements -->
-    <h2>2. Équipements réseaux</h2>
-    <ul>
-      <li>Hub : diffuse à tous</li>
-      <li>Switch : envoie au bon destinataire</li>
-      <li>Routeur : relie les réseaux</li>
-      <li>Serveur : fournit des services</li>
-    </ul>
-  </section>
-
-  <section> <!-- Section OSI -->
-    <h2>3. Modèle OSI</h2>
-    <ol>
-      <li>Physique</li>
-      <li>Liaison</li>
-      <li>Réseau</li>
-      <li>Transport</li>
-      <li>Session</li>
-      <li>Présentation</li>
-      <li>Application</li>
-    </ol>
-  </section>
-
-  <section> <!-- Section IP -->
-    <h2>4. Adressage IP</h2>
-    <p>Une adresse IP est composée d’un NetID et d’un HostID.</p>
-  </section>
-
-  <section> <!-- Section masque -->
-    <h2>5. Masque de sous-réseau</h2>
-    <p>Il permet d’identifier la partie réseau.</p>
-  </section>
-
-  <section> <!-- Section CIDR -->
-    <h2>6. CIDR</h2>
-    <p>Exemple : 192.168.1.0/24</p>
-  </section>
-
-  <section> <!-- Section HTML -->
-    <h2>7. Balises HTML</h2>
-    <ul>
-      <li>html : racine</li>
-      <li>head : informations</li>
-      <li>body : contenu visible</li>
-      <li>section : bloc</li>
-    </ul>
-  </section>
-
-</main> <!-- Fin du contenu principal -->
-
-<footer> <!-- Pied de page -->
-  <p>© Cours Réseaux - HTML CSS</p> <!-- Texte du footer -->
-</footer> <!-- Fin du pied de page -->
-
+<!DOCTYPE html> <!-- Indique que le document est en HTML5 -->
+<html lang="fr"> <!-- Balise racine ; langue : français -->
+<head> <!-- Début de la section meta / styles -->
+  <meta charset="utf-8"> <!-- Définit l'encodage UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Règle responsive pour mobile -->
+  <title>Cours Réseaux - Simple</title> <!-- Titre de la page affiché dans l'onglet -->
+  <style> /* Début du CSS intégré */ 
+    /* Règles de base pour la page */
+    html, body { height: 100%; } /* Assure la hauteur complète */
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f6f8fa; color: #102028; line-height: 1.5; } /* Style global */
+    /* Conteneur centré et aéré */
+    .container { max-width: 800px; margin: 32px auto; padding: 18px; } /* Centre le contenu */
+    /* En-tête simple */
+    header { text-align: left; margin-bottom: 16px; } /* Alignement et espace */
+    h1 { margin: 0 0 6px 0; font-size: 22px; color: #0a6b85; } /* Titre principal */
+    p.intro { margin: 0; color: #4b5961; font-size: 14px; } /* Petite intro */
+    /* Style des sections (cartes simples) */
+    section { background: #ffffff; border-radius: 8px; padding: 14px; margin-top: 12px; box-shadow: 0 6px 14px rgba(16,32,41,0.04); border: 1px solid rgba(16,32,41,0.03); } /* Apparence bloc */
+    h2 { margin: 0 0 8px 0; font-size: 16px; color: #0a6b85; } /* Titres de section */
+    p { margin: 6px 0; } /* Paragraphe standard */
+    ul { margin: 6px 0 6px 20px; } /* Listes avec indentation */
+    li { margin: 4px 0; } /* Espace entre éléments de liste */
+    .muted { color: #6b7780; font-size: 13px; } /* Texte secondaire */
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace; background: #f3f6f8; padding: 2px 6px; border-radius: 4px; font-size: 13px; } /* Apparence pour les adresses et masques */
+    footer { text-align: center; margin-top: 18px; color: #6b7780; font-size: 13px; } /* Pied de page */
+    @media (max-width: 520px) { .container { padding: 12px; margin: 16px; } h1 { font-size: 18px; } } /* Ajustement mobile */
+  </style> <!-- Fin du CSS intégré -->
+</head> <!-- Fin head -->
+<body> <!-- Début du corps du document -->
+  <div class="container"> <!-- Conteneur principal centré -->
+    <header> <!-- En-tête contenant titre et description courte -->
+      <h1>Cours Réseaux</h1> <!-- Titre de la page -->
+      <p class="intro">Notes claires et simples sur les notions de base en réseaux.</p> <!-- Brève description -->
+    </header> <!-- Fin de l'en-tête -->
+    <main> <!-- Contenu principal (suite de sections) -->
+      <section> <!-- Section Topologies -->
+        <h2>Topologies des réseaux</h2> <!-- Titre de la section -->
+        <p class="muted">Définition courte :</p> <!-- Court rappel -->
+        <p>La topologie décrit comment les équipements sont connectés physiquement ou logiquement.</p> <!-- Définition simple -->
+        <ul> <!-- Liste des topologies demandées -->
+          <li><strong>Bus</strong> : un seul câble partagé par tous les appareils. Avantages : simple et peu coûteux. Inconvénients : collisions possibles, panne du câble impacte tout.</li> <!-- Bus expliqué -->
+          <li><strong>Anneau</strong> : les appareils forment une boucle. Avantages : accès ordonné au média. Inconvénients : rupture casse la communication.</li> <!-- Anneau expliqué -->
+          <li><strong>Étoile</strong> : chaque poste relie à un central (switch). Avantages : facile à gérer et dépanner. Inconvénients : le central est point unique de défaillance.</li> <!-- Étoile expliqué -->
+        </ul> <!-- Fin liste topologies -->
+      </section> <!-- Fin section Topologies -->
+      <section> <!-- Section équipements -->
+        <h2>Équipements des réseaux</h2> <!-- Titre de la section -->
+        <p class="muted">Principaux éléments et rôles :</p> <!-- Rappel -->
+        <ul> <!-- Liste des équipements demandés -->
+          <li><strong>Hub</strong> : répète le signal sur tous les ports (niveau physique).</li> <!-- Hub -->
+          <li><strong>Switch</strong> : achemine les trames vers le port correct basé sur l'adresse MAC (niveau liaison).</li> <!-- Switch -->
+          <li><strong>Routeur</strong> : connecte et achemine entre réseaux différents (niveau réseau, IP).</li> <!-- Routeur -->
+          <li><strong>Serveur</strong> : machine qui fournit des services (DHCP, DNS, HTTP, fichiers...).</li> <!-- Serveur -->
+        </ul> <!-- Fin liste équipements -->
+      </section> <!-- Fin section équipements -->
+      <section> <!-- Section modèle OSI -->
+        <h2>Modèle OSI</h2> <!-- Titre de la section -->
+        <p class="muted">Principe général :</p> <!-- Petit rappel -->
+        <p>Le modèle OSI divise la communication en 7 couches pour organiser les fonctions réseau et faciliter le dépannage.</p> <!-- Explication simple -->
+        <ol> <!-- Liste ordonnée des couches du modèle OSI -->
+          <li><strong>7 - Application</strong> : services et applications (ex : navigateur).</li> <!-- Couche 7 -->
+          <li><strong>6 - Présentation</strong> : formatage des données, chiffrement.</li> <!-- Couche 6 -->
+          <li><strong>5 - Session</strong> : gestion des sessions/connexions.</li> <!-- Couche 5 -->
+          <li><strong>4 - Transport</strong> : TCP/UDP, fiabilité, ports.</li> <!-- Couche 4 -->
+          <li><strong>3 - Réseau</strong> : adressage logique et routage (IP).</li> <!-- Couche 3 -->
+          <li><strong>2 - Liaison</strong> : trames, adresses MAC, contrôle d'accès au média.</li> <!-- Couche 2 -->
+          <li><strong>1 - Physique</strong> : câbles, signaux, connecteurs.</li> <!-- Couche 1 -->
+        </ol> <!-- Fin liste OSI -->
+      </section> <!-- Fin section OSI -->
+      <section> <!-- Section classes d'adresses -->
+        <h2>Classes d'adresses (NetID / HostID)</h2> <!-- Titre de la section -->
+        <p class="muted">Structure IPv4 en classes A à C :</p> <!-- Rappel -->
+        <p>Une adresse IPv4 se compose d'une partie réseau (NetID) et d'une partie hôte (HostID) suivant la classe.</p> <!-- Explication -->
+        <ul> <!-- Liste décrivant les classes demandées -->
+          <li><strong>Classe A</strong> : plages 1.0.0.0 à 126.255.255.255 — NetID = 8 bits, HostID = 24 bits.</li> <!-- Classe A -->
+          <li><strong>Classe B</strong> : plages 128.0.0.0 à 191.255.255.255 — NetID = 16 bits, HostID = 16 bits.</li> <!-- Classe B -->
+          <li><strong>Classe C</strong> : plages 192.0.0.0 à 223.255.255.255 — NetID = 24 bits, HostID = 8 bits.</li> <!-- Classe C -->
+        </ul> <!-- Fin liste classes -->
+      </section> <!-- Fin section classes -->
+      <section> <!-- Section masques -->
+        <h2>Masque de sous-réseau (écriture par classe)</h2> <!-- Titre de la section -->
+        <p class="muted">Masques par défaut pour chaque classe :</p> <!-- Rappel -->
+        <ul> <!-- Liste des masques par classe -->
+          <li><strong>Classe A</strong> : 255.0.0.0 (notation CIDR : /8) — <span class="mono">255.0.0.0</span></li> <!-- Masque A -->
+          <li><strong>Classe B</strong> : 255.255.0.0 (notation CIDR : /16) — <span class="mono">255.255.0.0</span></li> <!-- Masque B -->
+          <li><strong>Classe C</strong> : 255.255.255.0 (notation CIDR : /24) — <span class="mono">255.255.255.0</span></li> <!-- Masque C -->
+        </ul> <!-- Fin liste masques -->
+      </section> <!-- Fin section masques -->
+      <section> <!-- Section calcul adresse réseau -->
+        <h2>Trouver l'adresse réseau (méthode)</h2> <!-- Titre de la section -->
+        <p class="muted">Méthode simple :</p> <!-- Rappel -->
+        <p>Fais un AND bit à bit entre l'adresse IP et le masque. En pratique, pour repères rapides, mets à zéro la partie hôte selon le masque.</p> <!-- Explication -->
+        <p><strong>Exemple :</strong> IP = <span class="mono">192.168.1.130</span> et masque = <span class="mono">255.255.255.0</span> → adresse réseau = <span class="mono">192.168.1.0</span></p> <!-- Exemple concret -->
+      </section> <!-- Fin section adresse réseau -->
+      <section> <!-- Section CIDR -->
+        <h2>CIDR et divisions en sous-réseau</h2> <!-- Titre de la section -->
+        <p class="muted">Notation et idée :</p> <!-- Rappel -->
+        <p>CIDR indique le nombre de bits du préfixe réseau après une barre oblique, par exemple <span class="mono">192.168.1.0/24</span>.</p> <!-- Définition CIDR -->
+        <p>Plus le nombre après la barre augmente, plus les sous-réseaux sont petits (moins d'hôtes par sous-réseau).</p> <!-- Explication simple -->
+        <ul> <!-- Exemples de divisions -->
+          <li><span class="mono">/24</span> → 256 adresses totales (254 hôtes utilisables).</li> <!-- Exemple /24 -->
+          <li><span class="mono">/25</span> → divise le /24 en 2 sous-réseaux (128 adresses chacun).</li> <!-- Exemple /25 -->
+          <li><span class="mono">/26</span> → divise le /24 en 4 sous-réseaux (64 adresses chacun).</li> <!-- Exemple /26 -->
+        </ul> <!-- Fin exemples CIDR -->
+      </section> <!-- Fin section CIDR -->
+      <section> <!-- Section balises HTML -->
+        <h2>Principales balises HTML</h2> <!-- Titre de la section -->
+        <p class="muted">Rôles des balises de base :</p> <!-- Rappel -->
+        <ul> <!-- Liste des balises demandées -->
+          <li><code>&lt;!DOCTYPE html&gt;</code> : indique la version HTML (HTML5).</li> <!-- Doctype -->
+          <li><code>&lt;html&gt;</code> : racine du document.</li> <!-- html -->
+          <li><code>&lt;head&gt;</code> : métadonnées, charset, liens CSS/JS.</li> <!-- head -->
+          <li><code>&lt;title&gt;</code> : titre affiché dans l'onglet du navigateur.</li> <!-- title -->
+          <li><code>&lt;meta&gt;</code> : informations comme charset et viewport.</li> <!-- meta -->
+          <li><code>&lt;body&gt;</code> : contenu visible de la page.</li> <!-- body -->
+          <li><code>&lt;header&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;</code> : éléments sémantiques pour structurer la page.</li> <!-- sémantique -->
+          <li><code>&lt;h1&gt;…&lt;h6&gt;</code> : titres hiérarchiques.</li> <!-- titres -->
+          <li><code>&lt;p&gt;</code> : paragraphe de texte.</li> <!-- paragraphe -->
+          <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> : listes non ordonnées / ordonnées.</li> <!-- listes -->
+          <li><code>&lt;a&gt;</code> : lien hypertexte.</li> <!-- lien -->
+          <li><code>&lt;img&gt;</code> : image (balise vide avec attribut src).</li> <!-- image -->
+        </ul> <!-- Fin liste balises -->
+      </section> <!-- Fin section balises -->
+    </main> <!-- Fin du contenu principal -->
+    <footer> <!-- Pied de page simple -->
+      <p class="muted">Page concise pour débuter — modifie ou imprime si besoin.</p> <!-- Message discret -->
+    </footer> <!-- Fin du pied de page -->
+  </div> <!-- Fin du conteneur principal -->
 </body> <!-- Fin du body -->
 </html> <!-- Fin du document HTML -->
